@@ -1,3 +1,5 @@
+import io.qameta.allure.Step;
+import jdk.jfr.Description;
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
@@ -27,7 +29,8 @@ public class CardNameTest {
     }
 
     @Test
-    @DisplayName("Cheking the selected name can be printed on the card")
+    @DisplayName("Cheking Name")
+    @Description("This tests cheking the selected name can be printed on the card")
     public void CardNamesholdBePrinted() {
         Account account = new Account(cardName);
         boolean actual = account.checkNameToEmboss();

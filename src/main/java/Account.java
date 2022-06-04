@@ -1,3 +1,4 @@
+import io.qameta.allure.Step;
 
 public class Account {
 
@@ -7,6 +8,7 @@ public class Account {
         this.name = name;
     }
 
+    @Step("Getting cardName {cardName}")
     public boolean checkNameToEmboss() {
         return name.length() >= 3 && name.length() <= 19 && !name.startsWith(" ") && !name.endsWith(" ") && onlyOneSpaceCheck();
     }
